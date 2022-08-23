@@ -10,7 +10,8 @@ require 'faker'
 puts "Createing 10 new fake Articles..."
 
 10.times do
-  Article.new(title: Faker::Book.title, content: Faker::Quote)
+  article = Article.new(title: Faker::Book.title, content: Faker::Quote.yoda)
+  article.save!
 end
 
 puts "Done!"
